@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Company - Portfolio">
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-display font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        Our Work
+      </h1>
+      <p class="text-xl text-zinc-400">
+        Some of our recent projects
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="group cursor-pointer">
+        <div class="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
+        <h3 class="text-xl font-display font-semibold mb-2">Project One</h3>
+        <p class="text-zinc-400">Description of the first project</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
+        <h3 class="text-xl font-display font-semibold mb-2">Project Two</h3>
+        <p class="text-zinc-400">Description of the second project</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
+        <h3 class="text-xl font-display font-semibold mb-2">Project Three</h3>
+        <p class="text-zinc-400">Description of the third project</p>
+      </div>
+    </div>
+  </section>
+</Layout>

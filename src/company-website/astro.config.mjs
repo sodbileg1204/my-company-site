@@ -4,8 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sodbileg1204.github.io',
-  base: '/my-company-site',
+  site: 'https://YOUR-USERNAME.github.io',
+  base: '/YOUR-REPO-NAME',
   integrations: [
     react(),
     tailwind()
@@ -15,7 +15,7 @@ export default defineConfig({
     locales: ['en', 'mn'],
     routing: {
       prefixDefaultLocale: false
-    }  
+    }
   },
   vite: {
     build: {
