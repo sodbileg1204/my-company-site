@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Компани - Нүүр">
+  <section class="relative overflow-hidden">
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto px-6 py-32">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-6xl md:text-7xl font-display font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-700">
+          Манай компанид тавтай морил
+        </h1>
+        <p class="text-xl text-zinc-400 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+          Инновац болон хичээл зүтгэлээр дамжуулан шилдэг байдлыг бий болгож байна
+        </p>
+        <div class="flex gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <a href="/mn/about" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105">
+            Дэлгэрэнгүй
+          </a>
+          <a href="/mn/contact" class="px-8 py-3 bg-zinc-800 rounded-lg font-medium hover:bg-zinc-700 transition-all transform hover:scale-105">
+            Холбоо барих
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="max-w-7xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-cyan-500/50 transition-all">
+          <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Хурдан гүйцэтгэл</h3>
+          <p class="text-zinc-400">Онцгой хурд ба найдвартай байдлыг хангах оновчтой шийдлүүд.</p>
+        </div>
+
+        <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-blue-500/50 transition-all">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Аюулгүй & Найдвартай</h3>
+          <p class="text-zinc-400">Таны өгөгдлийг хамгаалж байх байгууллагын түвшний аюулгүй байдал.</p>
+        </div>
+
+        <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-purple-500/50 transition-all">
+          <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Мэргэжлийн дэмжлэг</h3>
+          <p class="text-zinc-400">Алхам бүрт тань амжилтанд хүрэхэд туслахад бэлэн зориулалтын баг.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-in-from-bottom-4 {
+    from { transform: translateY(1rem); }
+    to { transform: translateY(0); }
+  }
+  
+  .animate-in {
+    animation-fill-mode: both;
+  }
+  
+  .fade-in {
+    animation-name: fade-in;
+  }
+  
+  .slide-in-from-bottom-4 {
+    animation-name: slide-in-from-bottom-4;
+  }
+  
+  .duration-700 {
+    animation-duration: 0.7s;
+  }
+  
+  .delay-150 {
+    animation-delay: 0.15s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+</style>
