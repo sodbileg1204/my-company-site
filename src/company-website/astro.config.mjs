@@ -4,8 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://YOUR-USERNAME.github.io',
-  base: '/YOUR-REPO-NAME',
+  site: 'https://nemu.energy',
+  base: '/',
   integrations: [
     react(),
     tailwind()
