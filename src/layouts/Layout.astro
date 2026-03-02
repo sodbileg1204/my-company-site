@@ -33,8 +33,13 @@ const switchLangPath = lang === 'en'
     <nav class="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-xl z-50">
       <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <a href={lang === 'en' ? `/` : `/mn`} class="text-2xl font-display font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-             Nemu Energy
+          <a href={lang === 'en' ? `/` : `/mn`} class="text-3xl font-display font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+             <img 
+              src={`/images/logo.png`} 
+              alt="Company Logo" 
+              class="h-12 w-12 object-contain"
+            />
+            Nemu Energy
           </a>
           
           <div class="flex items-center gap-8">

@@ -15,22 +15,24 @@ import Layout from '../../layouts/Layout.astro';
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="group cursor-pointer">
-        <div class="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
-        <h3 class="text-xl font-display font-semibold mb-2">Төсөл нэг</h3>
-        <p class="text-zinc-400">Эхний төслийн тайлбар</p>
+        <div class="aspect-video rounded-xl mb-4 overflow-hidden">
+          <img 
+            src={`/images/project1.jpg`} 
+            alt="Project One" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+        <h3 class="text-xl font-display font-semibold mb-2">Туршилтын төсөл</h3>
+        <p class="text-zinc-400">Байршил: Улаанбаатар хот</p>
       </div>
 
       <div class="group cursor-pointer">
         <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
         <h3 class="text-xl font-display font-semibold mb-2">Төсөл хоёр</h3>
-        <p class="text-zinc-400">Хоёрдугаар төслийн тайлбар</p>
+        <p class="text-zinc-400">Байршил: Хатанбулаг сум</p>
       </div>
 
-      <div class="group cursor-pointer">
-        <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl mb-4 group-hover:scale-105 transition-transform"></div>
-        <h3 class="text-xl font-display font-semibold mb-2">Төсөл гурав</h3>
-        <p class="text-zinc-400">Гуравдугаар төслийн тайлбар</p>
-      </div>
+
     </div>
   </section>
 </Layout>
