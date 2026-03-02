@@ -33,25 +33,25 @@ const switchLangPath = lang === 'en'
     <nav class="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-xl z-50">
       <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <a href={lang === 'en' ? '/' : '/mn'} class="text-2xl font-display font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Company
+          <a href={lang === 'en' ? `/` : `/mn`} class="text-2xl font-display font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+             Nemu Energy
           </a>
           
           <div class="flex items-center gap-8">
             <div class="hidden md:flex items-center gap-6">
-              <a href={lang === 'en' ? '/' : '/mn'} class="text-zinc-400 hover:text-zinc-100 transition-colors">
+              <a href={lang === 'en' ? `/` : `/mn`} class="text-zinc-400 hover:text-zinc-100 transition-colors">
                 {t('nav.home')}
               </a>
-              <a href={lang === 'en' ? '/about' : '/mn/about'} class="text-zinc-400 hover:text-zinc-100 transition-colors">
+              <a href={lang === 'en' ? `/about` : `/mn/about`} class="text-zinc-400 hover:text-zinc-100 transition-colors">
                 {t('nav.about')}
               </a>
-              <a href={lang === 'en' ? '/services' : '/mn/services'} class="text-zinc-400 hover:text-zinc-100 transition-colors">
+              <a href={lang === 'en' ? `/services` : `/mn/services`} class="text-zinc-400 hover:text-zinc-100 transition-colors">
                 {t('nav.services')}
               </a>
-              <a href={lang === 'en' ? '/portfolio' : '/mn/portfolio'} class="text-zinc-400 hover:text-zinc-100 transition-colors">
+              <a href={lang === 'en' ? `/portfolio` : `/mn/portfolio`} class="text-zinc-400 hover:text-zinc-100 transition-colors">
                 {t('nav.portfolio')}
               </a>
-              <a href={lang === 'en' ? '/contact' : '/mn/contact'} class="text-zinc-400 hover:text-zinc-100 transition-colors">
+              <a href={lang === 'en' ? `/contact` : `/mn/contact`} class="text-zinc-400 hover:text-zinc-100 transition-colors">
                 {t('nav.contact')}
               </a>
             </div>
@@ -62,10 +62,59 @@ const switchLangPath = lang === 'en'
             >
               {languages[otherLang]}
             </a>
+
+            <!-- Mobile Menu Button -->
+            <button 
+              id="mobile-menu-button"
+              class="md:hidden p-2 text-zinc-400 hover:text-zinc-100"
+              aria-label="Toggle menu"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2">
+          <div class="flex flex-col gap-2">
+            <a href={lang === 'en' ? `/` : `/mn`} class="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-lg transition-colors">
+              {t('nav.home')}
+            </a>
+            <a href={lang === 'en' ? `/about` : `/mn/about`} class="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-lg transition-colors">
+              {t('nav.about')}
+            </a>
+            <a href={lang === 'en' ? `/services` : `/mn/services`} class="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-lg transition-colors">
+              {t('nav.services')}
+            </a>
+            <a href={lang === 'en' ? `/portfolio` : `/mn/portfolio`} class="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-lg transition-colors">
+              {t('nav.portfolio')}
+            </a>
+            <a href={lang === 'en' ? `/contact` : `/mn/contact`} class="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-lg transition-colors">
+              {t('nav.contact')}
+            </a>
           </div>
         </div>
       </div>
     </nav>
+
+    <script>
+      // Mobile menu toggle
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!menuButton?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+          mobileMenu?.classList.add('hidden');
+        }
+      });
+    </script>
 
     <main>
       <slot />
